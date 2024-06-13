@@ -2,12 +2,22 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Cars from '@/views/CarView.vue'
 import Goods from '@/views/GoodsView.vue'
+import login from '@/views/login.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: "/",
+    redirect: '/login',
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: login
+  },
+  {
+    path: '/goods',
     name: 'goods',
     component: Goods
   },
